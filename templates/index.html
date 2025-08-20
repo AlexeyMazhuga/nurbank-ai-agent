@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестовый Агент Nurbank</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="chat-container">
+        <h1>AI-ассистент Nurbank</h1>
+        
+        <div class="response-area" id="responseArea">
+            <p>Задайте свой вопрос...</p>
+        </div>
+
+        <label for="page-select">Я нахожусь на странице:</label>
+        <select name="pages" id="pageSelect">
+            <option value="https://nurbank.kz/credits/standard-credit">Стандартный кредит</option>
+            <option value="https://nurbank.kz/deposits/srochnye-vklady/vklad-nursapak">Вклад Нур-Сапак</option>
+            <option value="https://nurbank.kz/credits/avtokreditovanie">Автокредитование</option>
+        </select>
+
+        <!-- ИЗМЕНЕНИЕ ЗДЕСЬ -->
+        <div class="input-container">
+            <input type="text" id="questionInput" placeholder="Введите вопрос или нажмите на микрофон...">
+            <button id="micButton" title="Задать вопрос голосом">🎤</button>
+        </div>
+        
+        <button id="askButton">Спросить</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

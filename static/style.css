@@ -1,0 +1,109 @@
+/* Стиль для всей страницы */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    padding-top: 50px;
+    color: #333;
+}
+
+/* Контейнер для нашего чата */
+.chat-container {
+    width: 500px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+/* Заголовок */
+h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #1c1e21;
+}
+
+/* Область для ответа */
+.response-area {
+    background-color: #f7f7f7;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 16px;
+    min-height: 100px;
+    margin-bottom: 16px;
+    white-space: pre-wrap; /* Позволяет тексту переноситься */
+    word-wrap: break-word;
+}
+
+/* Поле для ввода текста */
+#questionInput {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+/* Кнопка */
+#askButton {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer; /* Делает курсор в виде руки при наведении */
+    transition: background-color 0.2s;
+}
+
+/* Эффект при наведении мыши на кнопку */
+#askButton:hover {
+    background-color: #0056b3;
+}
+/* Контейнер для поля ввода и микрофона */
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+/* Переопределяем стиль для поля ввода, чтобы оно занимало все доступное место */
+#questionInput {
+    flex-grow: 1; /* Растягиваем поле ввода */
+    margin-bottom: 0; /* Убираем нижний отступ, т.к. он теперь у контейнера */
+    border-top-right-radius: 0; /* Убираем скругление справа */
+    border-bottom-right-radius: 0;
+}
+
+/* Стиль для кнопки микрофона */
+#micButton {
+    padding: 12px;
+    background-color: #e4e6eb;
+    border: 1px solid #ccc;
+    border-left: none; /* Убираем левую границу, чтобы она слилась с полем ввода */
+    border-top-right-radius: 6px; /* Добавляем скругление */
+    border-bottom-right-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+#micButton:hover {
+    background-color: #d8dbdf;
+}
+
+/* Стиль для кнопки, когда идет запись голоса */
+#micButton.is-listening {
+    background-color: #ff4136;
+    color: white;
+}
