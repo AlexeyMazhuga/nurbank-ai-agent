@@ -61,7 +61,7 @@ const sendQuestion = async () => {
     responseArea.innerText = 'Думаю над вашим вопросом...';
 
     try {
-        const response = await fetch('http://127.0.0.1:5000/api/ask', {
+        const response = await fetch('/api/ask', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
